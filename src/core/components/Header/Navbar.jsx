@@ -1,25 +1,14 @@
 import React from "react";
+import NavbarMenu from '../ui/NavbarMenu.jsx';
 
 const Navbar = () => {
   return (
-    <nav className="navbar font-apercu text-sm font-medium text-primary flex items-center justify-between bg-gray-100 px-6 py-3">
+    <nav className="navbar font-inter-tight text-sm text-primary flex items-center justify-between bg-gray-100 px-6 py-3">
       {/* Logo */}
       <div className="text-2xl font-bold">MA</div>
 
       {/* Menu */}
-      <div className="flex items-center gap-4">
-        <div className="relative group">
-          <button className="flex items-center gap-1">Explore ▼</button>
-          <div className="absolute left-0 mt-2 hidden w-40 bg-white shadow-md group-hover:block">
-            <a href="#" className="block px-4 py-2 hover:bg-gray-200">Option 1</a>
-            <a href="#" className="block px-4 py-2 hover:bg-gray-200">Option 2</a>
-          </div>
-        </div>
-        <a href="#">Directory</a>
-        <a href="#">Academy <span className="bg-black text-white text-xs px-1 rounded">New</span></a>
-        <a href="#">Jobs</a>
-        <a href="#">Market</a>
-      </div>
+      <NavbarMenu/>
 
       {/* Search Bar */}
       <div className="flex items-center w-80 bg-gray-200 px-3 py-1 rounded-lg">

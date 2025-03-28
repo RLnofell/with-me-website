@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @theme {
-    --font-apercu: "Apercu", sans-serif;
+    --font-inter-tight: "Inter Tight", sans-serif;
     --color-primary: #222222;
 }
 

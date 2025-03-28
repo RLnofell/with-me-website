@@ -1,22 +1,22 @@
 @font-face {
-    font-family: 'Apercu';
-    src: url('/public/fonts/Apercu Light.otf') format('opentype');
+    font-family: 'Inter Tight';
+    src: url('/public/fonts/InterTight-Light.ttf') format('opentype');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Apercu';
-    src: url('/public/fonts/Apercu Medium.otf') format('opentype');
+    font-family: 'Inter Tight';
+    src: url('/public/fonts/InterTight-Medium.ttf') format('opentype');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Apercu';
-    src: url('/public/fonts/Apercu Bold.otf') format('opentype');
+    font-family: 'Inter Tight';
+    src: url('/public/fonts/InterTight-Bold.ttf') format('opentype');
     font-weight: 700;
     font-style: normal;
     font-display: swap;

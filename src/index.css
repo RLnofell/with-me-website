@@ -2,6 +2,9 @@
 @theme {
     --font-inter-tight: "Inter Tight", sans-serif;
     --color-primary: #222222;
+    --breakpoint-xxl: 1440px;
+    --breakpoint-xs: 440px;
+    --breakpoint-s: 280px;
 }
 
 

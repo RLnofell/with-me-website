@@ -11,14 +11,20 @@ const menuItems = [
   { name: "Market", path: "/market", icon: null },
 ];
 
-const NavbarMenu = () => {
+const NavbarMenu = ({isMobileMenu}) => {
   return (
-    <div className="flex gap-5 text-sm font-inter-tight mx-4">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className={`flex ${isMobileMenu ? "flex-col gap-3 p-4" : "gap-5 px-5"} text-sm font-inter-tight`}
+    >
       {menuItems.map((item) => (
         <Link
           key={item.name}
           to={item.path}
-          className="flex items-center justify-center gap-1 hover:text-primary/80 text-primary relative font-medium"
+          className={`flex items-center ${isMobileMenu ? "justify-start" : "justify-center"} gap-1 hover:text-primary/80 text-primary relative font-medium`}
         >
           <p className="min-w-5">{item.name}</p>
           {item.icon && <span>{item.icon}</span>}
@@ -47,7 +53,7 @@ const NavbarMenu = () => {
           )}
         </Link>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

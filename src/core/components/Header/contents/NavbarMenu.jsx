@@ -18,20 +18,25 @@ const NavbarMenu = ({isMobileMenu}) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
-      className={`flex ${isMobileMenu ? "flex-col gap-3 p-4" : "gap-5 px-5"} text-sm font-inter-tight`}
+      className={`flex ${isMobileMenu ? "flex-col" : "gap-5 px-5"} text-sm font-inter-tight`}
     >
       {menuItems.map((item) => (
         <Link
           key={item.name}
           to={item.path}
-          className={`flex items-center ${isMobileMenu ? "justify-start" : "justify-center"} gap-1 hover:text-primary/80 text-primary relative font-medium`}
+          className={`flex items-center ${isMobileMenu ? "justify-start bg-white" : "justify-center"} gap-1 hover:text-primary/80 text-primary relative font-medium`}
         >
-          <p className="min-w-5">{item.name}</p>
-          {item.icon && <span>{item.icon}</span>}
-
-          {item.isNew && (
-            <span className="relative text-[10px] flex items-center justify-center font-semibold text-white bg-black overflow-hidden rounded-sm min-w-[29px] min-h-[15px]">
-              <span className="flex z-10 mt-[1px]">New</span>
+          <div className={`flex ${isMobileMenu ? "p-[17px] bg-black/10 w-full border-b-[0.5px] border-black/20" : "p-0 bg-transparent"}`}>
+            {/*content*/}
+            <p className={`min-w-5`}>{item.name}</p>
+            {/*dropdown icon*/}
+            {item.icon &&
+              <span className={`${isMobileMenu ? "hidden" : "flex mt-0.5 ml-1"}`}>{item.icon}</span>
+            }
+            {/*new icon*/}
+            {item.isNew && (
+              <span className="relative flex items-center justify-center ml-1 mt-0.5 bg-black overflow-hidden rounded-sm w-7 h-4">
+              <span className={`flex z-10 text-[10px] font-semibold text-white ${isMobileMenu ? "mt-0.5" : "mt-[1px]"}`}>New</span>
               <motion.span
                 className="absolute left-0 top-0 w-full h-full bg-gradient-to-r from-transparent via-white/80 to-transparent"
                 style={{
@@ -49,8 +54,9 @@ const NavbarMenu = ({isMobileMenu}) => {
                   ease: "easeInOut",
                 }}
               />
-          </span>
-          )}
+              </span>
+            )}
+          </div>
         </Link>
       ))}
     </motion.div>

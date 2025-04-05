@@ -63,15 +63,10 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="fixed top-[66px] left-0 h-full w-64 bg-white z-10 p-4 flex flex-col gap-4"
-              >
-                <button
-                  className="absolute top-4 right-4 text-gray-700 text-xl"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  ✕
-                </button>
+                className="fixed top-[65px] left-0 h-full w-full z-10 flex flex-col gap-4">
+
                 <NavbarMenu isMobileMenu={true} />
+
               </motion.div>
             )}
           </>

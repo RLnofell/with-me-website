@@ -62,11 +62,14 @@ const BaseModal = ({ children, title, ask, method, onMethodClick, className}) =>
         <span className="flex text-xl font-medium mb-9">{title}</span>
         {children}
 
-        {screenSize.closeButtonInside ? (
-          <CloseButtonModal className="absolute bg-black top-10 right-28 hover:bg-black/80 text-white" onClick={handleCloseModal}/>
-        ) : (
-          <CloseButtonModal className="fixed right-9 bottom-10 bg-white/80 hover:bg-white" onClick={handleCloseModal}/>
-        )}
+        <CloseButtonModal
+          className={`absolute transition-all duration-300 ${
+            screenSize.closeButtonInside
+              ? 'top-9 right-4 bg-black hover:bg-black/80 text-white'
+              : 'right-9 bottom-10 bg-white/80 hover:bg-white text-black'
+          }`}
+          onClick={handleCloseModal}
+        />
       </ModalStyle>
     </div>
   );

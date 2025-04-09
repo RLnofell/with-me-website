@@ -63,7 +63,7 @@ const BaseModal = ({ children, title, ask, method, onMethodClick, className}) =>
         {children}
 
         <CloseButtonModal
-          className={`absolute transition-all duration-300 ${
+          className={`fixed transition-all duration-300 ${
             screenSize.closeButtonInside
               ? 'top-9 right-4 bg-black hover:bg-black/80 text-white'
               : 'right-9 bottom-10 bg-white/80 hover:bg-white text-black'

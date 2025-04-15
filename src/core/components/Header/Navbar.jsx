@@ -4,7 +4,6 @@ import NavbarLogo from "./contents/NavbarLogo.jsx";
 import NavbarSearch from "./contents/NavbarSearch.jsx";
 import NavbarActions from "./contents/NavbarActions.jsx";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { LuUserRoundCheck } from "react-icons/lu";
 import { motion } from "framer-motion";
 import { debounce } from "lodash";
 import clsx from "clsx";
@@ -12,7 +11,6 @@ import clsx from "clsx";
 const Navbar = () => {
   const [screenSize, setScreenSize] = useState({
     isIpad: window.innerWidth <= 1270,
-    isMobile: window.innerWidth <= 570,
   });
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,7 +21,6 @@ const Navbar = () => {
       const width = window.innerWidth;
       setScreenSize({
         isIpad: width <= 1270,
-        isMobile: width <= 570,
       });
     }, 100);
 
@@ -82,7 +79,7 @@ const Navbar = () => {
 
       <NavbarSearch />
 
-      <div>{screenSize.isMobile ? <LuUserRoundCheck size={21} className="ml-2" /> : <NavbarActions />}</div>
+      <NavbarActions />
     </nav>
   );
 };

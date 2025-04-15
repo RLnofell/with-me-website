@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from '../layouts/MainLayout.jsx';
 import HomePage from '../pages/HomePage.jsx';
-import PageNotFound from '../pages/PageNotFound.jsx';
+import Unauthorized from '../pages/Unauthorized.jsx';
 
 function AppRouter() {
   return (
@@ -10,7 +10,7 @@ function AppRouter() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
         </Route>
-        <Route path="*" element={<PageNotFound />} />
+        <Route path="*" element={<Unauthorized />} />
       </Routes>
     </BrowserRouter>
   );

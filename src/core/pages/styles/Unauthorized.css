@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@keyframes cow {
+    0% {
+        left: 0%;
+        transform: translateY(0) rotate(0deg);
+    }
+    85% {
+        left: 38%;
+        transform: translateY(0) rotate(0deg);
+    }
+    90% {
+        left: 40%;
+        transform: translateY(0) rotate(5deg);
+    }
+    95% {
+        left: 38%;
+        transform: translateY(0) rotate(90deg);
+    }
+    100% {
+        left: 38%;
+        transform: translateY(15rem) rotate(90deg);
+    }
+}
+
+@keyframes btnAnim {
+    0%, 48% {
+        transform: translateX(-10rem) rotate(95deg);
+    }
+    55%, 100% {
+        transform: translateX(0rem) rotate(0deg);
+    }
+}
+
+@keyframes textAnim {
+    0%, 60% {
+        top: 0%;
+        transform: translatey(0);
+        opacity: 0;
+    }
+    70%, 76%, 85% {
+        top: 28%;
+        transform: translatey(5%);
+        opacity: 1;
+    }
+    73%, 79% {
+        top: 28%;
+        transform: translatey(-15%);
+        opacity: 1;
+    }
+    100% {
+        top: 28%;
+        transform: translatey(0);
+    }
+}
+
+.animate-cow {
+    animation: cow 2s linear forwards;
+}
+
+.animate-btnAnim {
+    animation: btnAnim 4s linear forwards;
+}
+
+.animate-textAnim {
+    animation: textAnim 3s ease forwards;
+}

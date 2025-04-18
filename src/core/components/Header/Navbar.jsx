@@ -14,14 +14,12 @@ const Navbar = () => {
   });
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
-  // responsive
+  // Responsive screen size
   useEffect(() => {
     const handleResize = debounce(() => {
-      const width = window.innerWidth;
-      setScreenSize({
-        isIpad: width <= 1270,
-      });
+      setScreenSize({ isIpad: window.innerWidth <= 1270 });
     }, 100);
 
     window.addEventListener("resize", handleResize);
@@ -33,52 +31,52 @@ const Navbar = () => {
     };
   }, []);
 
-  // isMenuOpen == no-scroll
+  // Add/remove no-scroll
   useEffect(() => {
-    if (isMenuOpen) {
+    if (isMenuOpen || isSearching) {
       document.documentElement.classList.add("no-scroll");
     } else {
       document.documentElement.classList.remove("no-scroll");
     }
-  }, [isMenuOpen]);
+  }, [isMenuOpen, isSearching]);
 
   return (
     <nav
       className={clsx(
         "navbar md:px-12 sm:px-7 xs:px-5 s:px-3 font-inter-tight text-sm text-primary flex items-center justify-between bg-gray-100 py-2",
-        screenSize.isIpad ? "xl:px-8 z-50" : "xl:px-16",
+        screenSize.isIpad ? "xl:px-8 z-50" : "xl:px-16"
       )}
     >
       {screenSize.isIpad ? (
         <div className="flex items-center">
           <>
-            <RxHamburgerMenu className="mr-3 cursor-pointer" size={21}
-                             onClick={() => setIsMenuOpen(!isMenuOpen)} />
-            {isMenuOpen && screenSize.isIpad && (
+            <RxHamburgerMenu
+              className="mr-3 cursor-pointer"
+              size={21}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            />
+            {!isSearching && isMenuOpen && (
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="fixed top-[65px] left-0 h-full w-full z-10 flex flex-col gap-4">
-
+                className="fixed top-[65px] left-0 h-full w-full z-10 flex flex-col gap-4 bg-white"
+              >
                 <NavbarMenu isMobileMenu={true} />
-
               </motion.div>
             )}
           </>
-
           <NavbarLogo />
         </div>
       ) : (
         <>
           <NavbarLogo />
-          <NavbarMenu isMobileMenu={false} />
+          {!isSearching && <NavbarMenu isMobileMenu={false} />}
         </>
       )}
 
-      <NavbarSearch />
-
+      <NavbarSearch isSearching={isSearching} setIsSearching={setIsSearching} />
       <NavbarActions />
     </nav>
   );

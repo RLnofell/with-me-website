@@ -34,15 +34,15 @@ const NavbarSearch = () => {
   );
 
   return (
-    <div className="relative w-[500px]">
-      <div className="w-full h-[42px] bg-white z-50 mx-2 flex items-center justify-center rounded-lg border border-gray-200">
+    <div className="relative w-[500px] mx-2">
+      <div className="w-full h-[42px] bg-white z-50 flex items-center justify-center rounded-lg border border-gray-200">
         <span className="text-primary ml-3 mb-0.5">
           <CiSearch size={18} />
         </span>
         <input
           type="text"
           placeholder="Search by Inspiration"
-          className="w-full bg-transparent outline-none px-3 text-[13px] font-inter-tight font-medium placeholder-primary"
+          className="w-full bg-transparent outline-none px-3 text-[13px] font-normal placeholder-primary"
           onFocus={() => setIsFocused(true)}
           onBlur={() => setTimeout(() => setIsFocused(false), 150)}
           value={searchTerm}
@@ -57,7 +57,7 @@ const NavbarSearch = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-[46px] w-[500px] left-2 right-2 bg-[#f5f5f5] rounded-xl border border-gray-200 z-50 flex overflow-hidden"
+            className="absolute top-[46px] w-[500px] left-0 right-0 bg-[#f5f5f5] rounded-xl border border-gray-200 z-50 flex overflow-hidden"
           >
             {/* Left Sidebar */}
             <div className="w-[180px] border-r border-gray-200 bg-white p-3 space-y-2">

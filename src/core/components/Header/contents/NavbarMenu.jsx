@@ -18,7 +18,7 @@ const NavbarMenu = ({isMobileMenu}) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.2 }}
-      className={`flex ${isMobileMenu ? "flex-col" : "gap-5 px-5"} text-sm font-inter-tight`}
+      className={`flex ${isMobileMenu ? "flex-col" : "gap-5 px-5 items-center"} text-sm font-medium`}
     >
       {menuItems.map((item) => (
         <Link

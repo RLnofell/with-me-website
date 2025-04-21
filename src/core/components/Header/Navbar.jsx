@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <nav
       className={clsx(
-        "navbar md:px-12 sm:px-7 xs:px-5 s:px-3 text-sm text-primary flex items-center justify-between bg-gray-100 py-2",
+        "navbar mt-0 md:mt-[7px] md:px-12 sm:px-7 xs:px-5 s:px-3 text-sm text-primary flex items-center justify-between bg-gray-100 py-2",
         screenSize.isIpad ? "xl:px-8 z-50" : "xl:px-16"
       )}
     >

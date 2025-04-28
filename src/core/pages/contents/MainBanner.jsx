@@ -1,4 +1,5 @@
 import React from "react";
+import UnderlineLetter from '../../components/ui/UnderlineLetter.jsx';
 
 const MainBanner = () => {
   return (
@@ -23,7 +24,7 @@ const MainBanner = () => {
         <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white text-xs">
           G
         </div>
-        <span className="text-xl font-medium">Gladeye</span>
+        <UnderlineLetter text="Gladeye"/>
       </div>
 
       {/*Image Ads*/}

@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <div>
       <MainBanner/>
-      <h1 className="">Trang chủ</h1>
+
 
     </div>
   );

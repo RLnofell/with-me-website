@@ -57,7 +57,7 @@ const BaseModal = ({ children, title, ask, method, onMethodClick, className}) =>
   if (!isOpen) return null;
 
   return (
-    <div className={`fixed inset-0 bg-black/70 flex justify-center items-center overflow-y-auto scroll-smooth ${className}`}>
+    <div className={`fixed inset-0 z-50 bg-black/70 flex justify-center items-center overflow-y-auto scroll-smooth ${className}`}>
       <ModalStyle ref={modalRef} ask={ask} method={method} onMethodClick={onMethodClick}>
         <span className="flex text-xl font-medium mb-9">{title}</span>
         {children}

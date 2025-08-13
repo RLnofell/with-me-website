@@ -26,7 +26,7 @@ const ModalStyle = forwardRef(({ children, ask, method, onMethodClick }, ref) =>
       </div>
 
       {/* Right */}
-      <div className="p-8 sm:p-12 flex flex-col justify-center overflow-y-auto scroll-smooth">
+      <div className="p-8 sm:p-12 flex flex-col justify-center overflow-y-visible scroll-smooth">
         {children}
       </div>
     </div>

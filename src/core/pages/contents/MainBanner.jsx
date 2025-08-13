@@ -20,7 +20,7 @@ const MainBanner = () => {
       </div>
 
       {/* creator */}
-      <div className="mt-6 flex items-center justify-center space-x-2">
+      <div className="mt-6 w-full h-0 flex items-center justify-center space-x-2 z-0">
         <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white text-xs">
           G
         </div>

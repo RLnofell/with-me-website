@@ -36,7 +36,7 @@ const Footer = () => {
           <div className="bg-gray-100 rounded-xl px-6 py-4 flex items-center gap-3 shadow-sm w-full md:w-auto">
             <span className="text-sm text-gray-600">Next Conferences</span>
             <FaCalendarAlt className="text-xl text-black" />
-            <span className="font-semibold text-black">Berlin, Mumbai & Tokyo</span>
+            <span className="font-semibold text-black">TP.HCM, VietNam</span>
           </div>
         </div>
       </div>

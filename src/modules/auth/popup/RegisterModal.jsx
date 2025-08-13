@@ -12,7 +12,7 @@ const RegisterModal = ({authMethodChange}) => {
       ask="Are you a member?"
       method="Log in now"
       onMethodClick={authMethodChange}
-      className="pt-44 py-9"
+      className="pt-96 py-9"
     >
       <InputField label="USERNAME (*)" placeholder="Username" />
       <InputField label="EMAIL (*)" placeholder="E-mail"/>

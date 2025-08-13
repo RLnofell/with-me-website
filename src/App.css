@@ -2,8 +2,12 @@
   margin: 0 auto;
 }
 
+html {
+    overflow-x: initial !important;
+}
+
 .navbar {
-  width: 100vw;
+    width: 100%;
 }
 
 .main{
@@ -15,7 +19,7 @@
 
 .no-scroll {
   overflow: hidden;
-  height: 100vh;
+  height: 100dvh;
 }
 
 

@@ -4,7 +4,7 @@ import NavbarAds from './NavbarAds.jsx';
 
 const Header = () => {
   return (
-    <header className="">
+    <header className="pt-0 md:pt-[7px] bg-[#e5e5e5]">
       {/*<NavbarAds/>*/}
       <Navbar />
     </header>

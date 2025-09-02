@@ -27,7 +27,7 @@ const courses = [
 
 const AcademyCourse = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-12 bg-white">
+    <div id="Courses" className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 py-12 bg-white">
       {courses.map((course, index) => (
         <div
           key={index}

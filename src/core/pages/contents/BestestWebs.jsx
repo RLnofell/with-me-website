@@ -20,7 +20,7 @@ const BestestWebs = () => {
   ];
 
   return (
-    <section className="w-full text-center px-4 py-16 bg-white">
+    <section id="BestestWeb" className="w-full text-center px-4 py-16 bg-white">
       {/* Top Text */}
       <p className="text-sm text-gray-500 mb-2">Latest</p>
 

@@ -24,7 +24,7 @@ const MainBanner = () => {
         <div className="w-8 h-8 rounded-full bg-black flex items-center justify-center text-white text-xs">
           G
         </div>
-        <UnderlineLetter text="Gladeye"/>
+        {/*<UnderlineLetter text="Gladeye"/>*/}
       </div>
 
       {/*Image Ads*/}

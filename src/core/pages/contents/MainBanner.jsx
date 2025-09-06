@@ -1,7 +1,10 @@
 import React from "react";
 import UnderlineLetter from '../../components/ui/UnderlineLetter.jsx';
+import { formatDate } from '../../utils/dateUtils.js';
 
 const MainBanner = () => {
+  const today = new Date();
+
   return (
     <div className="bg-[#e5e5e5] w-full text-center px-4 pt-14 pb-16">
 
@@ -9,7 +12,7 @@ const MainBanner = () => {
       <div className="flex justify-center text-sm text-gray-700 mb-4">
         <div className="flex items-center space-x-2">
           <span>Site of the Day</span>
-          <span className="border px-2 py-[2px] rounded-md text-sm font-medium">Apr 21, 2025</span>
+          <span className="border px-2 py-[2px] border-[#4e4e4e] rounded-md text-sm font-medium">{formatDate(today)}</span>
           <span>Score <b>7.4</b> of 10</span>
         </div>
       </div>

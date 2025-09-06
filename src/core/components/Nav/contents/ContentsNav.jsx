@@ -4,8 +4,8 @@ const ContentsNav = () => {
 
 
   const navlinks = [
-    { name: 'Bestest', href: '#BestestWeb' },
-    { name: 'Courses', href: '#Courses' },
+    { name: 'Bestest', href: '#bestest' },
+    { name: 'Courses', href: '#courses' },
     { name: 'Phần 3', href: '#section3' },
   ];
 

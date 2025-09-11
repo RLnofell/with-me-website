@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const NavbarAds = () => {
   const [isHovered, setIsHovered] = useState(false);
@@ -11,12 +11,11 @@ const NavbarAds = () => {
     >
       <div
         className={`flex justify-center items-center whitespace-nowrap ${
-          isHovered ? "paused" : "animate-marquee"
+          isHovered ? 'paused' : 'animate-marquee'
         }`}
       >
         <p className="text-white text-lg">
-          Đây là banner quảng cáo của bạn. Nhấp vào để dừng, di chuyển ra ngoài
-          để chạy vô tận!
+          Đây là banner quảng cáo của bạn. Nhấp vào để dừng, di chuyển ra ngoài để chạy vô tận!
         </p>
       </div>
     </div>

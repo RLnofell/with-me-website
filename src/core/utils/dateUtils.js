@@ -8,21 +8,21 @@
  */
 export function formatDate(
   date,
-  locale = "en-US",
+  locale = 'en-US',
   options = {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
   }
 ) {
   try {
     const parsedDate = new Date(date);
     if (isNaN(parsedDate.getTime())) {
-      return "Invalid date";
+      return 'Invalid date';
     }
     return parsedDate.toLocaleDateString(locale, options);
   } catch (error) {
-    console.error("Error formatting date:", error);
-    return "Invalid date";
+    console.error('Error formatting date:', error);
+    return 'Invalid date';
   }
 }

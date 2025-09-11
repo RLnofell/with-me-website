@@ -4,12 +4,11 @@ import BestestWebs from '../contents/BestestWebs.jsx';
 import AcademyCourse from '../contents/AcademyCourse.jsx';
 
 const HomePage = () => {
-
   return (
     <div>
-      <MainBanner/>
-      <BestestWebs/>
-      <AcademyCourse/>
+      <MainBanner />
+      <BestestWebs />
+      <AcademyCourse />
     </div>
   );
 };

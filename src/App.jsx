@@ -1,10 +1,8 @@
-import './App.css'
+import './App.css';
 import AppRouter from './core/routes/AppRouter.jsx';
 
 function App() {
-  return (
-    <AppRouter/>
-  )
+  return <AppRouter />;
 }
 
-export default App
+export default App;

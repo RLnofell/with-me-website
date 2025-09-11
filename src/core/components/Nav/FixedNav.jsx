@@ -12,7 +12,7 @@ const FixedNav = () => {
     >
       <ul className="flex items-center space-x-1.5">
         <LogoNav />
-        <ContentsNav/>
+        <ContentsNav />
         <LinkButtonNav />
       </ul>
     </nav>

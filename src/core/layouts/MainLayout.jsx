@@ -10,11 +10,11 @@ const MainLayout = () => {
       <Header />
       <main className="main">
         <Outlet />
-        <FixedNav/>
+        <FixedNav />
       </main>
       <Footer />
     </div>
   );
-}
+};
 
 export default React.memo(MainLayout);

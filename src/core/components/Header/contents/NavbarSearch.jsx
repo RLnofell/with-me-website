@@ -1,33 +1,33 @@
-import React, { useState } from "react";
-import { CiSearch } from "react-icons/ci";
-import { FiTrendingUp } from "react-icons/fi";
-import { PiListBulletsBold, PiCpuThin, PiChatsCircle, PiMusicNotesSimple } from "react-icons/pi";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from 'react';
+import { CiSearch } from 'react-icons/ci';
+import { FiTrendingUp } from 'react-icons/fi';
+import { PiListBulletsBold, PiCpuThin, PiChatsCircle, PiMusicNotesSimple } from 'react-icons/pi';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const categories = [
-  { label: "Trending", icon: <FiTrendingUp size={16} /> },
-  { label: "By Category", icon: <PiListBulletsBold size={16} /> },
-  { label: "By Technology", icon: <PiCpuThin size={16} /> },
-  { label: "Collections", icon: <PiChatsCircle size={16} /> },
-  { label: "Blog", icon: <PiMusicNotesSimple size={16} /> },
+  { label: 'Trending', icon: <FiTrendingUp size={16} /> },
+  { label: 'By Category', icon: <PiListBulletsBold size={16} /> },
+  { label: 'By Technology', icon: <PiCpuThin size={16} /> },
+  { label: 'Collections', icon: <PiChatsCircle size={16} /> },
+  { label: 'Blog', icon: <PiMusicNotesSimple size={16} /> },
 ];
 
 const suggestions = [
-  { title: "Portfolio Websites", count: 8972 },
-  { title: "Free fonts", count: 288 },
-  { title: "Animated websites", count: 10666 },
-  { title: "Sites of the Day", count: 6452 },
-  { title: "Scrolling", count: 5450 },
-  { title: "One page design", count: 5386 },
-  { title: "UI design", count: 6538 },
-  { title: "E-commerce layouts", count: 5898 },
-  { title: "Architecture websites", count: 2698 },
-  { title: "Photography websites", count: 1342 },
+  { title: 'Portfolio Websites', count: 8972 },
+  { title: 'Free fonts', count: 288 },
+  { title: 'Animated websites', count: 10666 },
+  { title: 'Sites of the Day', count: 6452 },
+  { title: 'Scrolling', count: 5450 },
+  { title: 'One page design', count: 5386 },
+  { title: 'UI design', count: 6538 },
+  { title: 'E-commerce layouts', count: 5898 },
+  { title: 'Architecture websites', count: 2698 },
+  { title: 'Photography websites', count: 1342 },
 ];
 
 const NavbarSearch = () => {
   const [isFocused, setIsFocused] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState('');
 
   const filteredSuggestions = suggestions.filter((s) =>
     s.title.toLowerCase().includes(searchTerm.toLowerCase())

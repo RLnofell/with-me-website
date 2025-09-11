@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import UnderlineLetter from '../../components/ui/UnderlineLetter.jsx';
 import { formatDate } from '../../utils/dateUtils.js';
 
@@ -7,13 +7,16 @@ const MainBanner = () => {
 
   return (
     <div className="bg-[#e5e5e5] w-full text-center px-4 pt-14 pb-16">
-
       {/* day and score */}
       <div className="flex justify-center text-sm text-gray-700 mb-4">
         <div className="flex items-center space-x-2">
           <span>Site of the Day</span>
-          <span className="border px-2 py-[2px] border-[#4e4e4e] rounded-md text-sm font-medium">{formatDate(today)}</span>
-          <span>Score <b>7.4</b> of 10</span>
+          <span className="border px-2 py-[2px] border-[#4e4e4e] rounded-md text-sm font-medium">
+            {formatDate(today)}
+          </span>
+          <span>
+            Score <b>7.4</b> of 10
+          </span>
         </div>
       </div>
 
@@ -31,8 +34,11 @@ const MainBanner = () => {
       </div>
 
       {/*Image Ads*/}
-      <img className="mt-16 rounded-lg" src="/src/assets/satoru-gojo-blue-3840x2160-16951.jpg" alt="Description" />
-
+      <img
+        className="mt-16 rounded-lg"
+        src="/src/assets/satoru-gojo-blue-3840x2160-16951.jpg"
+        alt="Description"
+      />
     </div>
   );
 };

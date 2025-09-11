@@ -1,4 +1,4 @@
-import { FaCalendarAlt } from "react-icons/fa";
+import { FaCalendarAlt } from 'react-icons/fa';
 import React from 'react';
 
 const Footer = () => {
@@ -56,9 +56,13 @@ const Footer = () => {
         {/* Socials */}
         <div className="flex flex-wrap items-center gap-4">
           <span className="font-semibold">Connect:</span>
-          {["Instagram", "LinkedIn", "Twitter", "Facebook", "YouTube", "TikTok", "Pinterest"].map((platform, i) => (
-            <span key={i} className="hover:underline cursor-pointer">{platform}</span>
-          ))}
+          {['Instagram', 'LinkedIn', 'Twitter', 'Facebook', 'YouTube', 'TikTok', 'Pinterest'].map(
+            (platform, i) => (
+              <span key={i} className="hover:underline cursor-pointer">
+                {platform}
+              </span>
+            )
+          )}
         </div>
       </div>
     </footer>

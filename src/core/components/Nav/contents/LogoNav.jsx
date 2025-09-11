@@ -9,8 +9,7 @@ const LogoNav = () => {
         <div className="text-[#E9E9E9]">WM</div>
       </div>
     </>
-  )
-
-}
+  );
+};
 
 export default React.memo(LogoNav);

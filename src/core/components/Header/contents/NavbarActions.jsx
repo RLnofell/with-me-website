@@ -7,7 +7,6 @@ import { debounce } from 'lodash';
 import { LuUserRoundCheck } from 'react-icons/lu';
 
 const NavbarActions = () => {
-
   const dispatch = useDispatch();
   const { isOpen, modalType } = useSelector((state) => state.modal);
 
@@ -24,11 +23,11 @@ const NavbarActions = () => {
       });
     }, 100);
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     handleResize();
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
       handleResize.cancel();
     };
   }, []);
@@ -45,31 +44,46 @@ const NavbarActions = () => {
     dispatch(openModal(type));
   };
 
-  return(
+  return (
     <>
-      {screenSize.isMobile ?
+      {screenSize.isMobile ? (
         <>
           <div className="flex items-center justify-center">
-            <LuUserRoundCheck size={21} className="ml-2 min-h-[21px] min-w-[21px]" onClick={handleOpenLoginModal}/>
+            <LuUserRoundCheck
+              size={21}
+              className="ml-2 min-h-[21px] min-w-[21px]"
+              onClick={handleOpenLoginModal}
+            />
           </div>
-          {isOpen && modalType === 'login' && <LoginModal authMethodChange={() => authMethodChange('register')} />}
-          {isOpen && modalType === 'register' && <RegisterModal authMethodChange={() => authMethodChange('login')} />}
-        </> :
+          {isOpen && modalType === 'login' && (
+            <LoginModal authMethodChange={() => authMethodChange('register')} />
+          )}
+          {isOpen && modalType === 'register' && (
+            <RegisterModal authMethodChange={() => authMethodChange('login')} />
+          )}
+        </>
+      ) : (
         <div className="xxl:ml-0 ml-2 flex items-center gap-3 max-h-[42px]">
           <div className="xxl:pr-4 lg:pr-2 pr-0 gap-3 flex items-center font-medium">
             <button
               onClick={handleOpenLoginModal}
-              className="xl:mr-2 mr-0 text-sm text-primary hover:text-primary/80 text-nowrap flex items-center justify-center">
+              className="xl:mr-2 mr-0 text-sm text-primary hover:text-primary/80 text-nowrap flex items-center justify-center"
+            >
               Log in
             </button>
-            {isOpen && modalType === 'register' && <RegisterModal authMethodChange={() => authMethodChange('login')} />}
+            {isOpen && modalType === 'register' && (
+              <RegisterModal authMethodChange={() => authMethodChange('login')} />
+            )}
 
             <button
               onClick={handleOpenRegisterModal}
-              className="text-sm text-primary hover:text-primary/80 text-nowrap flex items-center justify-center">
+              className="text-sm text-primary hover:text-primary/80 text-nowrap flex items-center justify-center"
+            >
               Sign Up
             </button>
-            {isOpen && modalType === 'login' && <LoginModal authMethodChange={() => authMethodChange('register')} />}
+            {isOpen && modalType === 'login' && (
+              <LoginModal authMethodChange={() => authMethodChange('register')} />
+            )}
           </div>
 
           <div className="flex xxl:ml-2 ml-0 items-center gap-3 font-medium">
@@ -81,9 +95,9 @@ const NavbarActions = () => {
             </button>
           </div>
         </div>
-      }
+      )}
     </>
-  )
-}
+  );
+};
 
 export default React.memo(NavbarActions);

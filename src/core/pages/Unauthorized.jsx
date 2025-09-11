@@ -15,6 +15,6 @@ const Unauthorized = () => {
       </Link>
     </div>
   );
-}
+};
 
 export default Unauthorized;

@@ -1,12 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @theme {
-    --font-inter-tight: "Inter Tight", sans-serif;
-    --color-primary: #222222;
-    --borderColorPrimary: #4e4e4e;
-    --breakpoint-xxl: 1440px;
-    --breakpoint-xs: 440px;
-    --breakpoint-s: 280px;
+  --font-inter-tight: 'Inter Tight', sans-serif;
+  --color-primary: #222222;
+  --borderColorPrimary: #4e4e4e;
+  --breakpoint-xxl: 1440px;
+  --breakpoint-xs: 440px;
+  --breakpoint-s: 280px;
 }
-
-
-

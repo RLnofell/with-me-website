@@ -4,7 +4,7 @@ import Button from '../components/ui/Button.jsx';
 import SocialButton from '../components/ui/SocialButton.jsx';
 import BaseModal from './BaseModal.jsx';
 
-const LoginModal = ({authMethodChange}) => {
+const LoginModal = ({ authMethodChange }) => {
   return (
     <BaseModal
       title="Login with your e-mail"
@@ -16,9 +16,7 @@ const LoginModal = ({authMethodChange}) => {
       <InputField label="PASSWORD (*)" placeholder="Password" type="password" />
       <span className="text-sm font-normal text-left mt-4">
         Forgot your password?{' '}
-        <span className="font-medium cursor-pointer hover:underline">
-          Click here
-        </span>
+        <span className="font-medium cursor-pointer hover:underline">Click here</span>
       </span>
       <Button className="py-6 mt-9">
         <span className="text-lg">Log in now</span>
